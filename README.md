@@ -1,6 +1,6 @@
-# 🚀 Learning [C Programming Language] Mastery
+# 🚀 Learning [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)] Mastery
 
-Welcome to the [C Programming Language] Mastery repository! Elevate your coding skills with hands-on examples and engaging problem-solving exercises. Whether you're a coding novice or a seasoned developer, this repository is your gateway to mastering [C Programming Language].
+Welcome to the [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)] Mastery repository! Elevate your coding skills with hands-on examples and engaging problem-solving exercises. Whether you're a coding novice or a seasoned developer, this repository is your gateway to mastering [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)].
 
 ## 🌐 Table of Contents
 
@@ -15,7 +15,7 @@ Welcome to the [C Programming Language] Mastery repository! Elevate your coding 
 Embark on your coding journey by cloning this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/[repository-name].git
+git clone https://github.com/Anku9053/C_Programming-Questions.git
 
 
 🔍 Topics Covered
@@ -45,7 +45,7 @@ Pull Request: Submit a pull request with a detailed description of your changes.
 Check out our Contribution Guidelines for more details.
 
 📜 License
-This repository is licensed under the [Your License] - see the LICENSE file for details.
+This repository is licensed under the [(https://github.com/Anku9053/C_Programming-Questions.git)] - see the LICENSE file for details.
 
 🚀 Happy coding! 🚀
-Feel free to further customize this template with your repository's specific details. Replace placeholders like `[Programming Language]`, `[official website/link]`, `[any other dependencies/tools required]`, `[Your License]`, and others with actual information relevant to your repository. Additionally, consider adding emojis, relevant images, or badges to make the README visually appealing.
+Feel free to further customize this template with your repository's specific details.
