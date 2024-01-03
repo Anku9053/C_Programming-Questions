@@ -1,3 +1,8 @@
+// Name Ankesh Sharma
+// Date 03-01-2024
+// Language C
+
+
 #include <conio.h>
 #include <stdio.h>
 #include <stdalign.h>

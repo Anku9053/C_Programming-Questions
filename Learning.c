@@ -1,3 +1,9 @@
+// Name Ankesh Sharma
+// Date 03-01-2024
+// Language C
+
+
+
 #include <stdio.h>
 int main2();
 int main3();

@@ -1,3 +1,9 @@
+
+// Name Ankesh Sharma
+// Date 03-01-2024
+// Language C
+
+
 #include <stdio.h>
 #include <conio.h>
 #include <stdlib.h>
