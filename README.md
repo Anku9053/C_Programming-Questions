@@ -1,4 +1,4 @@
-# 🚀 Learning [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)] Mastery
+# 🚀 Learning [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)]
 
 Welcome to the [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)] Mastery repository! Elevate your coding skills with hands-on examples and engaging problem-solving exercises. Whether you're a coding novice or a seasoned developer, this repository is your gateway to mastering [[C Programming Language](https://github.com/Anku9053/C_Programming-Questions.git)].
 
