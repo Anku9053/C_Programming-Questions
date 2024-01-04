@@ -19,7 +19,9 @@
 // };
 
 
-
+struct date{
+        int dates,months,year;
+};
 
 #include <stdio.h>
 #include <conio.h>
@@ -30,23 +32,25 @@ struct Rectangle {
 // int structsecond();
 // int arraysttruct();
 // int secondquestion();
-int thirdquestion(struct Rectangle *d1);
+// int thirdquestion(struct Rectangle *d1);
+struct date baisicstructure();
 // int syntaxlearning();
 int main(){
-    struct Rectangle d1;
+    struct Rectangle d2;
     // syntaxlearning();
     // structsecond();
+    struct date d1;
     // arraysttruct();
     // secondquestion();
-    thirdquestion(&d1);
+    // thirdquestion(&d1);
+    d1 = baisicstructure();
+    printf("%d-%d-%d",d1.dates,d1.months,d1.year);
     printf("\nGoing to learn Structure");
 }
 
 
 int syntaxlearning(){
-    struct date{
-        int dates,months,year;
-    };
+    
 
     struct date d1,d2,d3;
     printf("Enter the dates : ");
@@ -154,3 +158,11 @@ int thirdquestion(struct Rectangle *d1){
     float area = d1->length*d1->width;
     printf("%.2f",area);
 }
+
+
+struct date baisicstructure(){
+    struct date Somedate;
+    printf("Enter the date : ");
+    scanf("%d/%d/%d",&Somedate.dates,&Somedate.months,&Somedate.year);
+    return Somedate;
+};
