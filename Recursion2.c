@@ -8,7 +8,7 @@
 #include <string.h>
 
 
-int sortarray(int n,int arr[],int bag[],int start,int end);
+int reversearray(int n,int arr[],int bag[],int start,int end);
 
 int main(){
     int start ,end,index ,n;
@@ -23,7 +23,7 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&arr[i]);
     }
-    int anss = sortarray(n,arr,bag,start,end);
+    int anss = reversearray(n,arr,bag,start,end);
      printf("Sorted array: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", bag[i]);
@@ -32,18 +32,26 @@ int main(){
     printf("Hey Buddyyyy!!!!");
 }
 
-int sortarray(int n,int arr[],int bag[],int start,int end){   
+int reversearray(int n,int arr[],int bag[],int start,int end){   
 
     if(start>n){
         return 0;
     }
 
     else{
+        
         bag[start] = arr[end];
-        return sortarray(n,arr,bag,start+1,end-1);
+        return reversearray(n,arr,bag,start+1,end-1);
     }
 
    
 }
 
 
+
+
+
+
+int sort(){
+    
+}
