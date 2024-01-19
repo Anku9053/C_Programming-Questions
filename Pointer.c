@@ -8,7 +8,8 @@
 // int twolevelpointer();
 // int HardpointerValuChange();
 // int easyPointerChange();
-int pointerToArray();
+// int pointerToArray();
+int ValueToSum();
 int main()
 {
     int x, y, z;
@@ -28,7 +29,8 @@ int main()
     // twolevelpointer();
     // HardpointerValuChange();
     // easyPointerChange();
-    pointerToArray();
+    // pointerToArray();
+    ValueToSum();
     printf("\nhurray i learnt pointer");
 }
 
@@ -173,5 +175,18 @@ int pointerToArray(){
     printf("%x",&arr[4]);
 }
 
-//By  taking value and printing the answer
+//By taking value from adress and printing the sum of an array
+
+int ValueToSum(){
+    int arr[5],sum=0;
+    int len  = sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<len;i++){
+        scanf("%d",&arr[i]);
+        sum+=*(arr+i);
+        printf("\n");
+        printf("%x",*(arr+i));
+        printf("\n");
+    }
+    printf("%d",sum);
+}
 
