@@ -166,3 +166,4 @@ struct date baisicstructure(){
     scanf("%d/%d/%d",&Somedate.dates,&Somedate.months,&Somedate.year);
     return Somedate;
 };
+
