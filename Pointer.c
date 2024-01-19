@@ -9,13 +9,19 @@
 // int HardpointerValuChange();
 // int easyPointerChange();
 // int pointerToArray();
-int ValueToSum();
+// int ValueToSum();
+// int PlayingWithPointerByUsingArray();
+// int AddingOneToTheValueByUsingPointer(int  *x);
+int AithmeticAdditionUsingPointer();
+// int swap(int *n1, int *n2);
 int main()
 {
     int x, y, z;
     x = 10;
     y = 50;
     z = 90;
+    int *ptr;
+    ptr = &x;
     // basicdeclaration();
     // int d= valuechangethroughfunction(y);
     // printf("%d",d);
@@ -30,7 +36,16 @@ int main()
     // HardpointerValuChange();
     // easyPointerChange();
     // pointerToArray();
-    ValueToSum();
+    // ValueToSum();
+    // PlayingWithPointerByUsingArray();
+    // printf("The value of first x is %d\n",x);
+    // printf("The value of first y is %d\n",y);
+    // swap(&x,&y);
+    // printf("The value of  x is %d\n",x);
+    // printf("The value of  y is %d\n",y);
+    // AddingOneToTheValueByUsingPointer(ptr);
+    // printf("%d",x);
+    AithmeticAdditionUsingPointer();
     printf("\nhurray i learnt pointer");
 }
 
@@ -189,4 +204,67 @@ int ValueToSum(){
     }
     printf("%d",sum);
 }
+
+// lets play with the pointers by using array
+
+int PlayingWithPointerByUsingArray(){
+    int arr[5] = {10,20,30,40,50};
+    int *p = arr;
+    int *p2= &arr[0];
+    int *ptr1 = &arr[2];
+    int *ptr3;
+    printf("Ptr2 is %x\n = ",p2);
+    printf("Ptr1 is %x\n = ",p);
+
+    printf("Ptr2 is %x\n = ",ptr1);
+
+
+    int len = sizeof(arr)/sizeof(arr[0]);
+    for(int i=0;i<len;i++){
+        ptr3 = &arr[i];
+
+        printf("Ptr%d is %x\n = ",i+1,ptr3);
+    }
+}
+
+
+
+// Important Topic 
+// Pointer to function
+
+
+int swap(int *n1, int *n2){
+    int  temp;
+    temp = *n2;
+    *n2 = *n1;
+    *n1 = temp;
+}
+
+
+// Adding one to the pointer by using function 
+
+int AddingOneToTheValueByUsingPointer(int *x){
+    // *(x)++;
+    ++(*x);
+}
+
+
+// Airthmetic Pointer
+
+// ================>>>>>>>>>>>>>>>>>>>  Addition Problems Based on array and Integers
+
+int AithmeticAdditionUsingPointer(){
+    int a[5] = {0,1,-1,10,11};
+    int *p = &a[0];
+    printf("%d\n",*p);
+    printf("the  adress is %p\n",p);
+    p = p+2;
+    printf("%d\n",*p);
+    printf("the  adress is %p\n",p);
+    p = p+1;
+    *p= 2;
+    printf("%d",*p);
+    printf("the  adress is %p",p);
+}
+
 
