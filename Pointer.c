@@ -12,7 +12,12 @@
 // int ValueToSum();
 // int PlayingWithPointerByUsingArray();
 // int AddingOneToTheValueByUsingPointer(int  *x);
-int AithmeticAdditionUsingPointer();
+// int AithmeticAdditionUsingPointer();
+int AirthmeticSubtractionUsingPointer();
+int memoryallocation();
+int memoryallocation2();
+int rellock();
+int relocation();
 // int swap(int *n1, int *n2);
 int main()
 {
@@ -45,7 +50,13 @@ int main()
     // printf("The value of  y is %d\n",y);
     // AddingOneToTheValueByUsingPointer(ptr);
     // printf("%d",x);
-    AithmeticAdditionUsingPointer();
+    // AithmeticAdditionUsingPointer();
+    // AirthmeticSubtractionUsingPointer();
+    //  memoryallocation();
+    // memoryallocation2();
+    // rellock();
+    // relocation();
+    // printf("\n");
     printf("\nhurray i learnt pointer");
 }
 
@@ -169,102 +180,162 @@ int easyPointerChange()
     printf("%d", c);
 }
 
-
 // Pointer To Array
 // a program where we got to know the base adress of the array is the array first element address aactually
-int pointerToArray(){
+int pointerToArray()
+{
     int arr[5];
-    int len = sizeof(arr)/sizeof(arr[0]);
+    int len = sizeof(arr) / sizeof(arr[0]);
     // printf("lenggth is %d",len);
-    for(int i=0;i<len;i++){
-        printf("%x\n",&arr[i]);
+    for (int i = 0; i < len; i++)
+    {
+        printf("%x\n", &arr[i]);
     }
-    printf("%x",&arr);
+    printf("%x", &arr);
     printf("\n");
-    printf("%x",&arr[1]);
+    printf("%x", &arr[1]);
     printf("\n");
-    printf("%x",&arr[2]);
+    printf("%x", &arr[2]);
     printf("\n");
-    printf("%x",&arr[3]);
+    printf("%x", &arr[3]);
     printf("\n");
-    printf("%x",&arr[4]);
+    printf("%x", &arr[4]);
 }
 
-//By taking value from adress and printing the sum of an array
+// By taking value from adress and printing the sum of an array
 
-int ValueToSum(){
-    int arr[5],sum=0;
-    int len  = sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<len;i++){
-        scanf("%d",&arr[i]);
-        sum+=*(arr+i);
+int ValueToSum()
+{
+    int arr[5], sum = 0;
+    int len = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < len; i++)
+    {
+        scanf("%d", &arr[i]);
+        sum += *(arr + i);
         printf("\n");
-        printf("%x",*(arr+i));
+        printf("%x", *(arr + i));
         printf("\n");
     }
-    printf("%d",sum);
+    printf("%d", sum);
 }
 
 // lets play with the pointers by using array
 
-int PlayingWithPointerByUsingArray(){
-    int arr[5] = {10,20,30,40,50};
+int PlayingWithPointerByUsingArray()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
     int *p = arr;
-    int *p2= &arr[0];
+    int *p2 = &arr[0];
     int *ptr1 = &arr[2];
     int *ptr3;
-    printf("Ptr2 is %x\n = ",p2);
-    printf("Ptr1 is %x\n = ",p);
+    printf("Ptr2 is %x\n = ", p2);
+    printf("Ptr1 is %x\n = ", p);
 
-    printf("Ptr2 is %x\n = ",ptr1);
+    printf("Ptr2 is %x\n = ", ptr1);
 
-
-    int len = sizeof(arr)/sizeof(arr[0]);
-    for(int i=0;i<len;i++){
+    int len = sizeof(arr) / sizeof(arr[0]);
+    for (int i = 0; i < len; i++)
+    {
         ptr3 = &arr[i];
 
-        printf("Ptr%d is %x\n = ",i+1,ptr3);
+        printf("Ptr%d is %x\n = ", i + 1, ptr3);
     }
 }
 
-
-
-// Important Topic 
+// Important Topic
 // Pointer to function
 
-
-int swap(int *n1, int *n2){
-    int  temp;
+int swap(int *n1, int *n2)
+{
+    int temp;
     temp = *n2;
     *n2 = *n1;
     *n1 = temp;
 }
 
+// Adding one to the pointer by using function
 
-// Adding one to the pointer by using function 
-
-int AddingOneToTheValueByUsingPointer(int *x){
+int AddingOneToTheValueByUsingPointer(int *x)
+{
     // *(x)++;
     ++(*x);
 }
-
 
 // Airthmetic Pointer
 
 // ================>>>>>>>>>>>>>>>>>>>  Addition Problems Based on array and Integers
 
-int AithmeticAdditionUsingPointer(){
-    int a[5] = {0,1,-1,10,11};
+int AithmeticAdditionUsingPointer()
+{
+    int a[5] = {0, 1, -1, 10, 11};
     int *p = &a[0];
-    printf("%d\n",*p);
-    printf("the  adress is %p\n",p);
-    p = p+2;
-    printf("%d\n",*p);
-    printf("the  adress is %p\n",p);
-    p = p+1;
-    *p= 2;
-    printf("%d",*p);
-    printf("the  adress is %p",p);
+    printf("%d\n", *p);
+    printf("the  adress is %p\n", p);
+    p = p + 2;
+    printf("%d\n", *p);
+    printf("the  adress is %p\n", p);
+    p = p + 1;
+    *p = 2;
+    printf("%d", *p);
+    printf("the  adress is %p", p);
 }
 
+//  ==================>>>>>>>>>>>>>>>   Subtraction Problem Based on array and Integers
+// We can subtract pointer with another pointer and it is going to give you some kind of an integer value for example (pinter - pointer) while we can also subtract it from an integervalue for example (pointer-2) it is going to give you the Pointer value like an adress of some variable or a memory adress based on your inputs
+int AirthmeticSubtractionUsingPointer()
+{
+    printf("We are going to learn airthmetic subtraction of pointer");
+}
+
+int memoryallocation()
+{
+    int n, i, *ptr, sum = 0;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    ptr = (int *)malloc(n * sizeof(int));
+    if (ptr == NULL)
+    {
+        printf("Error! memory not allocated.");
+        exit(0);
+    }
+
+    printf("Enter elements: ");
+    for (i = 0; i < n; ++i)
+    {
+        scanf("%d", ptr + i);
+        sum += *(ptr + i);
+    }
+
+    printf("Sum = %d", sum);
+    free(ptr);
+
+    return 0;
+}
+
+int memoryallocation2()
+{
+    int n, i, *ptr, sum = 0;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    ptr = (int *)calloc(n, sizeof(int));
+    if (ptr == NULL)
+    {
+        printf("Error! memory not allocated.");
+        exit(0);
+    }
+
+    printf("Enter elements: ");
+    for (i = 0; i < n; ++i)
+    {
+        scanf("%d", ptr + i);
+        sum += *(ptr + i);
+    }
+
+    printf("Sum = %d", sum);
+    free(ptr);
+    return 0;
+}
 
