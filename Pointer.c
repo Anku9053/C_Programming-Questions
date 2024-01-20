@@ -364,3 +364,102 @@ int rellock()
 
     return 0;
 }
+
+
+int rellock()
+{
+    int *ptr, i, n1, n2;
+    printf("Enter size: ");
+    scanf("%d", &n1);
+
+    ptr = (int *)malloc(n1 * sizeof(int));
+
+    printf("Addresses of previously allocated memory:\n");
+    for (i = 0; i < n1; ++i)
+        printf("%pc\n", ptr + i);
+
+    printf("\nEnter the new size: ");
+    scanf("%d", &n2);
+
+    ptr = realloc(ptr, n2 * sizeof(int));
+
+    printf("Addresses of newly allocated memory:\n");
+    for (i = 0; i < n2; ++i)
+        printf("%pc\n", ptr + i);
+
+    free(ptr);
+
+    return 0;
+}
+
+int relocation()
+{
+
+    int n;
+    double *data;
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+
+    data = (double *)calloc(n, sizeof(double));
+    if (data == NULL)
+    {
+        printf("Error!!! memory not allocated.");
+        exit(0);
+    }
+
+    for (int i = 0; i < n; ++i)
+    {
+        printf("Enter number%d: ", i + 1);
+        scanf("%lf", data + i);
+    }
+    for (int i = 1; i < n; ++i)
+    {
+        if (*data < *(data + i))
+        {
+            *data = *(data + i);
+        }
+    }
+    printf("Largest number = %.2lf", *data);
+
+    free(data);
+
+    return 0;
+}
+
+
+// Revising the code as it is not my code i will try to make it more simple 
+
+int addingmatrix() {
+  int r, c, a[100][100], b[100][100], sum[100][100], i, j;
+  printf("Enter the number of rows (between 1 and 100): ");
+  scanf("%d", &r);
+  printf("Enter the number of columns (between 1 and 100): ");
+  scanf("%d", &c);
+
+  printf("\nEnter elements of 1st matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element a%d%d: ", i + 1, j + 1);
+      scanf("%d", &a[i][j]);
+    }
+  printf("Enter elements of 2nd matrix:\n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("Enter element b%d%d: ", i + 1, j + 1);
+      scanf("%d", &b[i][j]);
+    }
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      sum[i][j] = a[i][j] + b[i][j];
+    }
+  printf("\nSum of two matrices: \n");
+  for (i = 0; i < r; ++i)
+    for (j = 0; j < c; ++j) {
+      printf("%d   ", sum[i][j]);
+      if (j == c - 1) {
+        printf("\n\n");
+      }
+    }
+
+  return 0;
+}
